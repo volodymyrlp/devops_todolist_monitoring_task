@@ -11,6 +11,7 @@
       "id": 1,
       "type": "timeseries",
       "title": "Total HTTP Requests",
+      "description": "Per-method HTTP request rate (requests per second) handled by the ToDo app, derived from the http_requests_total counter.",
       "datasource": { "type": "prometheus", "uid": "prometheus" },
       "gridPos": { "h": 9, "w": 12, "x": 0, "y": 0 },
       "fieldConfig": {
@@ -42,6 +43,7 @@
       "id": 2,
       "type": "stat",
       "title": "HTTP Requests Creation Time",
+      "description": "Creation/reset time of each method's HTTP request counter, taken from the explicit http_requests_created_timestamp_seconds gauge.",
       "datasource": { "type": "prometheus", "uid": "prometheus" },
       "gridPos": { "h": 9, "w": 12, "x": 12, "y": 0 },
       "fieldConfig": {

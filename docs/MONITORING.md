@@ -100,6 +100,6 @@ and can be imported into Grafana (Dashboards → Import).
 | Panel | Query |
 |-------|-------|
 | **Total HTTP Requests** | `sum(rate(http_requests_total[5m])) by (method)` |
-| **HTTP Requests Creation Time** | `http_requests_created_timestamp_seconds * 1000` (an explicit Gauge set when each method's counter is first created; rendered with the `dateTimeAsIso` unit so the reset time is human‑readable) |
+| **HTTP Requests Creation Time** | `http_requests_created_timestamp_seconds * 1000` (an explicit Gauge, defined directly in `metrics.py` rather than relying on the client's implicit `_created` series, set when each method's counter is first created; rendered with the `dateTimeAsIso` unit so the reset time is human‑readable) |
 
 ![Grafana dashboard](screenshots/grafana-dashboard.png)
